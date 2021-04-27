@@ -13,10 +13,6 @@ export default function App() {
       <Header />
       <CarList></CarList>
       <StatusBar></StatusBar>
-
-
-
-
     </View>
   );
 
