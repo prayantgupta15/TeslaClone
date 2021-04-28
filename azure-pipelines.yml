@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: macos-latest
+
+steps:
+# - checkout: self
+#     persistCredentials: true
+#     clean: true
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+    # Download and cache dependencies
+- script: npm install
+  displayName: 'Install Dependencies'
+
+  # install expo cli
+- script: npm install -g expo-cli
+  displayName: 'Install Expo'
+
