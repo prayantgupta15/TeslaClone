@@ -15,18 +15,23 @@ steps:
 #     persistCredentials: true
 #     clean: true
 
-- task: Npm@1
-  inputs:
-    command: 'install'
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
-  displayName: 'Install Node.js'
-    # Download and cache dependencies
-# - script: npm install
-#   displayName: 'Install Dependencies'
+  displayName: 'Install Node'
 
-#   # install expo cli
-# - script: npm install -g expo-cli
-#   displayName: 'Install Expo'
+- script: npm install
+  displayName: 'Install Dependecies'
+
+- script: npm run limit
+  displayName: 'Run lint'
+
+- script: npm run test
+  displayName: 'Run unit tests'
+
+- script: |
+    cd android
+    bundle install
+    fastlane build
+  displayName: 'Build Android'
 
