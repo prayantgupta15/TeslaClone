@@ -16,8 +16,8 @@ const CarList = (props) => {
                 }
 
 showsVerticalScrollIndicator={false}
-                snapToAlignment={'start'}
-                decelerationRate={'normal'}
+                snapToAlignment='start'
+                decelerationRate='normal'
                 snapToInterval={Dimensions.get('window').height}
             />
 

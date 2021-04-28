@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
         width: "100%",
         position: 'absolute',
         top: 30,
-        zIndex: 100,
+        zIndex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
         paddingHorizontal: 20,
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
     logo: {
         height: 25,
-        width: 130,
+        width: 100,
         resizeMode: 'contain'
     },
     menu: {
